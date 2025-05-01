@@ -1,61 +1,35 @@
-/* Base styles */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neck and Nut Tech</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header data-aos="fade-down">
+    <img src="neck-and-nut-logo.jpeg" alt="Neck and Nut Tech Logo" style="height:100px; margin-bottom: 10px;" />
+    <h1>Neck and Nut Tech</h1>
+    <p>Where Precision Meets Passion</p>
+  </header>
 
-/* Header */
-header {
-  background-color: #0c8b3c;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
+  <section id="welcome" data-aos="fade-up">
+    <h2>Welcome Message</h2>
+    <p>Every guitarist knows: when your guitar feels right, your soul sings louder. At Neck and Nut Tech, we don’t just fix gear—we fine-tune expression. We sculpt your sound before the first note is even played. From the curve of your strings to the tension in your frets, we bring every detail into perfect harmony. This isn’t just a tech service — this is a craft, a calling, and a commitment to every artist who dares to be heard.</p>
+    <p>This is the home of flawless playability. Welcome to Neck and Nut Tech — where your sound gets the respect it deserves.</p>
+    <div style="text-align: center;" data-aos="zoom-in">
+      <img src="joseph-photo.jpg" alt="Joseph Jasef" style="width:150px; border-radius: 12px; margin-top: 20px;" />
+      <p><strong>Joseph Jasef</strong><br>Lead Guitar Technician | Visionary | Musician's Ally</p>
+    </div>
+  </section>
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
+  <section class="button-container" data-aos="fade-up">
+    <a href="https://wa.me/2347014061938" class="action-button" target="_blank">Chat on WhatsApp</a>
+    <a href="mailto:neckandnut@gmail.com" class="action-button">Contact Us via Email</a>
+  </section>
 
-header p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-/* Sections */
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-  background-color: white;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-}
-
-section h2 {
-  color: #0c8b3c;
-  margin-bottom: 15px;
-}
-
-section ul {
-  list-style: disc inside;
-  padding-left: 20px;
-}
-
-section li {
-  margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  margin-top: 40px;
-}
+  <section id="about" data-aos="fade-up">
+    <h2>About Neck and Nut Tech</h2>
+    <p>Founded by Joseph Jasef,
