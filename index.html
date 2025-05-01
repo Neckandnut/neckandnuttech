@@ -4,105 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neck and Nut Tech</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Meta Theme Color -->
-  <meta name="theme-color" content="#0c8b3c" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Animated Background Art -->
-  <div class="animated-bg">
-    <div class="circle one"></div>
-    <div class="circle two"></div>
-    <div class="circle three"></div>
-  </div>
+  <!-- Background Art Canvas -->
+  <div class="background-art"></div>
 
-  <!-- Header -->
-  <header class="fade-in">
+  <header>
     <img src="neck-and-nut-logo.jpeg" alt="Neck and Nut Tech Logo" />
     <h1>Neck and Nut Tech</h1>
     <p>Where Precision Meets Passion</p>
   </header>
 
-  <!-- Welcome Section -->
-  <section id="welcome" class="fade-in">
-    <h2>Welcome Message</h2>
-    <p>Every guitarist knows: when your guitar feels right, your soul sings louder. At Neck and Nut Tech, we don’t just fix gear—we fine-tune expression.</p>
-    <p>This is the home of flawless playability. Welcome to Neck and Nut Tech — where your sound gets the respect it deserves.</p>
-    <div class="center">
-      <img src="joseph-photo.jpg" alt="Joseph Jasef" />
-      <p><strong>Joseph Jasef</strong><br>Lead Guitar Technician | Visionary | Musician's Ally</p>
-    </div>
-  </section>
+  <main>
+    <section class="animated-section">
+      <h2>Welcome Message</h2>
+      <p>Every guitarist knows: when your guitar feels right, your soul sings louder. At Neck and Nut Tech, we don’t just fix gear—we fine-tune expression. From string curve to fret tension, we bring harmony to your sound. Welcome to where your tone gets the respect it deserves.</p>
+      <div class="profile">
+        <img src="joseph-photo.jpg" alt="Joseph Jasef" />
+        <p><strong>Joseph Jasef</strong><br>Lead Guitar Technician</p>
+      </div>
+    </section>
 
-  <!-- Contact Buttons -->
-  <section class="button-container fade-in">
-    <a href="https://wa.me/2347014061938" class="action-button" target="_blank">💬 Chat on WhatsApp</a>
-    <a href="mailto:neckandnut@gmail.com" class="action-button">📧 Contact via Email</a>
-  </section>
+    <section class="button-container">
+      <a href="https://wa.me/2347014061938" class="action-button" target="_blank">Chat on WhatsApp</a>
+      <a href="mailto:neckandnut@gmail.com" class="action-button">Email Us</a>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="fade-in">
-    <h2>About Neck and Nut Tech</h2>
-    <p>Founded by Joseph Jasef, a musician, music therapist, and gear enthusiast, Neck and Nut Tech was born out of a deep understanding of how the feel of an instrument can make or break a performance.</p>
-  </section>
+    <section class="animated-section">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Guitar setups, repairs & mods</li>
+        <li>Stage & studio tech support</li>
+        <li>Gear provision on request</li>
+        <li>School music dept support</li>
+      </ul>
+    </section>
 
-  <!-- Services -->
-  <section id="services" class="fade-in">
-    <h2>What We Offer</h2>
-    <ul>
-      <li>🎸 Guitar & Gear Services: Setup, wiring, repair, mods</li>
-      <li>🎚️ Studio & Stage Tech Support</li>
-      <li>🎁 Provision of Gear</li>
-      <li>🏫 School Instrument Support</li>
-    </ul>
-  </section>
+    <section class="animated-section">
+      <h2>Clients We Serve</h2>
+      <ul>
+        <li>Musicians, Bands, Studios</li>
+        <li>Churches & Event Teams</li>
+        <li>Music Schools & Beginners</li>
+      </ul>
+    </section>
 
-  <!-- Clients -->
-  <section id="clients" class="fade-in">
-    <h2>Who We Serve</h2>
-    <ul>
-      <li>🎤 Musicians</li>
-      <li>🎵 Studios</li>
-      <li>🎓 Schools</li>
-      <li>⛪ Churches</li>
-    </ul>
-  </section>
+    <section class="animated-section">
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong> +234 7014061938</p>
+      <p><strong>Email:</strong> neckandnut@gmail.com</p>
+      <p><strong>Location:</strong> Bariga, Lagos</p>
+    </section>
+  </main>
 
-  <!-- Plans -->
-  <section id="plans" class="fade-in">
-    <h2>Our Payment Plans</h2>
-    <p><strong>Pay-As-You-Go</strong>: Flexible service-based payment.</p>
-    <p><strong>Concert Plan</strong>: Pre-event setup & discounts.</p>
-    <p><strong>School & Studio Plans</strong>: Regular maintenance & emergency fixes.</p>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="fade-in">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> +234 7014061938</p>
-    <p><strong>Email:</strong> neckandnut@gmail.com</p>
-    <p><strong>Location:</strong> Bariga, Lagos</p>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Neck and Nut Tech. All rights reserved.</p>
   </footer>
 
   <!-- Background Music -->
-  <audio id="bg-music" autoplay loop>
+  <audio id="bg-music" loop>
     <source src="background-music.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
+  <button id="music-toggle">Play Background Music</button>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
