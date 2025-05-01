@@ -2,170 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neck and Nut Tech</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-
-  <!-- AOS Library for Scroll Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      background-color: #222;
-      color: white;
-    }
-
-    header img {
-      height: 100px;
-      margin-bottom: 10px;
-    }
-
-    section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-      background-color: white;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .action-button {
-      background-color: #f39c12;
-      color: white;
-      padding: 12px 20px;
-      text-align: center;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 18px;
-      margin: 10px;
-      transition: all 0.3s ease;
-      transform: scale(1);
-    }
-
-    .action-button:hover {
-      background-color: #e67e22;
-      transform: scale(1.05);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .button-container {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    #welcome img {
-      width: 150px;
-      height: auto;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #222;
-      color: white;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header data-aos="fade-down">
-    <img src="neck-and-nut-logo.jpeg" alt="Neck and Nut Tech Logo" />
+
+  <!-- Hero/Header Section -->
+  <header class="hero">
+    <img src="neck-and-nut-logo.jpeg" alt="Neck and Nut Tech Logo" class="logo" />
     <h1>Neck and Nut Tech</h1>
-    <p>Where Precision Meets Passion</p>
+    <p class="tagline">Where Precision Meets Passion</p>
   </header>
 
-  <section id="welcome" data-aos="fade-up">
+  <!-- Welcome Section -->
+  <section id="welcome" class="section fade-in">
     <h2>Welcome Message</h2>
-    <p>Every guitarist knows: when your guitar feels right, your soul sings louder. At Neck and Nut Tech, we don’t just fix gear—we fine-tune expression...</p>
-    <div style="text-align: center;">
-      <img src="joseph-photo.jpg" alt="Joseph Jasef" data-aos="zoom-in"/>
+    <p>Every guitarist knows: when your guitar feels right, your soul sings louder...</p>
+    <p>This is the home of flawless playability. Welcome to Neck and Nut Tech — where your sound gets the respect it deserves.</p>
+    <div class="profile">
+      <img src="joseph-photo.jpg" alt="Joseph Jasef" class="profile-photo"/>
       <p><strong>Joseph Jasef</strong><br>Lead Guitar Technician | Visionary | Musician's Ally</p>
     </div>
   </section>
 
-  <section class="button-container" data-aos="fade-up">
-    <a href="https://wa.me/2347014061938" class="action-button" target="_blank">Chat on WhatsApp</a>
-    <a href="mailto:neckandnut@gmail.com" class="action-button">Contact Us via Email</a>
+  <!-- Action Buttons -->
+  <section class="button-container fade-in">
+    <a href="https://wa.me/2347014061938" class="action-button whatsapp" target="_blank">Chat on WhatsApp</a>
+    <a href="mailto:neckandnut@gmail.com" class="action-button email">Contact Us via Email</a>
   </section>
 
-  <section id="about" data-aos="fade-up">
-    <h2>About Neck and Nut Tech</h2>
+  <!-- About Section -->
+  <section id="about" class="section fade-in">
+    <h2>About Us</h2>
     <p>Founded by Joseph Jasef, a musician, music therapist, and gear enthusiast...</p>
   </section>
 
-  <section id="vision-mission" data-aos="fade-right">
+  <!-- Vision & Mission -->
+  <section id="vision-mission" class="section fade-in">
     <h2>Vision</h2>
-    <p>To be the leading name in guitar tech services...</p>
+    <p>To be the leading name in guitar tech services in Nigeria and beyond...</p>
     <h2>Mission</h2>
     <p>To provide top-tier guitar setup and tech support services...</p>
   </section>
 
-  <section id="services" data-aos="fade-left">
+  <!-- Services -->
+  <section id="services" class="section fade-in">
     <h2>What We Offer</h2>
     <ul>
-      <li><strong>Guitar & Gear Services:</strong> Full setup...</li>
-      <li><strong>Studio & Stage Tech Support:</strong> On-stage emergency fixes...</li>
+      <li><strong>Guitar & Gear Services:</strong> Full setup, repairs, and mods</li>
+      <li><strong>Studio & Stage Support:</strong> Emergency fixes, pedalboard setup</li>
+      <li><strong>Gear Provision:</strong> Instruments, pedals, accessories</li>
+      <li><strong>School Support:</strong> Maintenance for music departments</li>
     </ul>
   </section>
 
-  <section id="clients" data-aos="fade-up">
+  <!-- Clients -->
+  <section id="clients" class="section fade-in">
     <h2>Who We Serve</h2>
     <ul>
       <li>Gigging Musicians</li>
-      <li>Bands</li>
-      <li>Music Studios</li>
+      <li>Churches & Studios</li>
+      <li>Schools & Departments</li>
+      <li>Aspiring Guitarists</li>
     </ul>
   </section>
 
-  <section id="plans" data-aos="fade-up">
+  <!-- Payment Plans -->
+  <section id="plans" class="section fade-in">
     <h2>Our Payment Plans</h2>
-    <h3>1. Pay-As-You-Go</h3>
-    <p>Best for: Musicians, hobbyists, casual players...</p>
-    <h3>2. Concert & Event Tech Plan</h3>
-    <p>Best for: Concert organizers, churches, event teams...</p>
+    <p>Flexible options for musicians, events, schools, and studios...</p>
   </section>
 
-  <section id="contact" data-aos="fade-up">
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-in">
     <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> +234 7014061938, +234 8151502475, +234 9167525690</p>
+    <p><strong>Phone:</strong> +234 7014061938, +234 8151502475</p>
     <p><strong>Email:</strong> neckandnut@gmail.com</p>
-    <p><strong>Location:</strong> Bariga, Lagos — available for on-site or mobile bookings</p>
+    <p><strong>Location:</strong> Bariga, Lagos</p>
   </section>
 
-  <footer data-aos="fade-up">
+  <!-- Footer -->
+  <footer>
     <p>&copy; 2025 Neck and Nut Tech. All rights reserved.</p>
   </footer>
 
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
