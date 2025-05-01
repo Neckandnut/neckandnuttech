@@ -1,159 +1,135 @@
-/* Google Fonts */
+/* Base Styles */
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f7f7f7, #eafaf1);
   color: #333;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* Hero / Header Section */
-.hero {
-  background: linear-gradient(135deg, #0c8b3c, #1abc9c);
+/* Header */
+header {
+  background: linear-gradient(135deg, #0c8b3c, #3fc276);
   color: white;
   padding: 60px 20px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  border-bottom: 5px solid #26a65b;
 }
 
-.logo {
+header img {
   height: 100px;
   margin-bottom: 20px;
-  border-radius: 12px;
+  animation: pop 1.2s ease-in-out;
 }
 
-.hero h1 {
-  font-size: 3rem;
+header h1 {
   margin: 0;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
 }
 
-.tagline {
-  font-size: 1.2rem;
+header p {
+  font-size: 1.3rem;
   margin-top: 10px;
-  font-weight: 300;
 }
 
-/* Section Styling */
-.section {
+/* Sections */
+section {
   max-width: 900px;
-  margin: auto;
-  background: white;
-  margin-bottom: 30px;
+  margin: 30px auto;
   padding: 40px 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
-  transition: transform 0.3s ease;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
 }
 
-/* Fade In Animation */
-.fade-in {
-  animation: fadeInUp 0.8s ease-in-out;
+section:hover {
+  transform: translateY(-3px);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.section h2 {
+section h2 {
   color: #0c8b3c;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
-.section ul {
+section h3 {
+  color: #26a65b;
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+
+section ul {
+  list-style: disc inside;
   padding-left: 20px;
 }
 
-.section li {
+section li {
   margin-bottom: 10px;
 }
 
 /* Profile Image */
-.profile {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.profile-photo {
+#welcome img {
   width: 150px;
-  border-radius: 12px;
-  margin-bottom: 10px;
+  height: auto;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Buttons */
-.button-container {
-  text-align: center;
-  margin: 30px 0;
-}
-
 .action-button {
-  display: inline-block;
-  padding: 14px 24px;
-  margin: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
+  background: linear-gradient(135deg, #f39c12, #f1c40f);
   color: white;
-  background: linear-gradient(135deg, #f39c12, #e67e22);
-  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 14px 25px;
+  text-align: center;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 10px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
 .action-button:hover {
-  background: linear-gradient(135deg, #e67e22, #d35400);
+  background: linear-gradient(135deg, #e67e22, #f39c12);
   transform: scale(1.05);
-}
-
-.whatsapp {
-  background: linear-gradient(135deg, #25D366, #128C7E);
-}
-
-.whatsapp:hover {
-  background: linear-gradient(135deg, #128C7E, #075E54);
-}
-
-.email {
-  background: linear-gradient(135deg, #2980b9, #3498db);
-}
-
-.email:hover {
-  background: linear-gradient(135deg, #1c6692, #2471a3);
 }
 
 /* Footer */
 footer {
-  background: #222;
-  color: white;
+  background-color: #222;
+  color: #fff;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
+  margin-top: 60px;
   border-top: 4px solid #0c8b3c;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+/* Back-to-Top Button (already styled in script for JS-created element) */
 
-  .section {
-    padding: 25px 15px;
+/* Animations */
+@keyframes pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
   }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
-  .action-button {
-    width: 80%;
-    font-size: 1.1rem;
-  }
+/* AOS default styles override */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
 
-  .profile-photo {
-    width: 100px;
-  }
+[data-aos].aos-animate {
+  opacity: 1;
 }
