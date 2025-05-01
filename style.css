@@ -1,95 +1,48 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* Reset and Base */
-* {
+/* Font and Reset */
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  font-family: 'Rubik', sans-serif;
+  background: #f7f7f7;
   overflow-x: hidden;
-  color: #333;
-  position: relative;
 }
 
-/* Animated Background Art */
-body::before {
-  content: '';
+/* Artistic Background Animation */
+.background-art {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: url('https://www.transparenttextures.com/patterns/cubes.png') repeat;
-  opacity: 0.05;
-  z-index: -2;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  top: -50px;
-  right: -50px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, #0c8b3c55, #0c8b3c00);
-  animation: floaty 10s infinite ease-in-out;
+  width: 100%;
+  height: 100%;
   z-index: -1;
+  background: linear-gradient(130deg, #0c8b3c, #1abc9c, #3498db);
+  background-size: 600% 600%;
+  animation: bgFlow 20s ease infinite;
+  opacity: 0.15;
 }
 
-@keyframes floaty {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(20px) rotate(5deg);
-  }
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 60px 20px 30px;
-  background: linear-gradient(135deg, #0c8b3c, #0b5d29);
+  padding: 50px 20px;
+  background-color: #0c8b3c;
   color: white;
-  position: relative;
 }
 
 header img {
-  height: 100px;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  height: 90px;
+  margin-bottom: 10px;
 }
 
 header h1 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 2.8rem;
-  animation: fadeInDown 1s ease forwards;
+  margin: 0;
 }
 
 header p {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
-/* Sections */
-section {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 40px 30px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-section:hover {
-  transform: translateY(-3px);
-}
-
-section h2 {
-  color: #0c8b3c;
-  margin-bottom: 15px;
-  font-size: 1.8
+  font-size:
