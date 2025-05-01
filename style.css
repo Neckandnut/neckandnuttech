@@ -1,35 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neck and Nut Tech</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-</head>
-<body>
-  <header data-aos="fade-down">
-    <img src="neck-and-nut-logo.jpeg" alt="Neck and Nut Tech Logo" style="height:100px; margin-bottom: 10px;" />
-    <h1>Neck and Nut Tech</h1>
-    <p>Where Precision Meets Passion</p>
-  </header>
+/* Google Fonts */
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
 
-  <section id="welcome" data-aos="fade-up">
-    <h2>Welcome Message</h2>
-    <p>Every guitarist knows: when your guitar feels right, your soul sings louder. At Neck and Nut Tech, we don’t just fix gear—we fine-tune expression. We sculpt your sound before the first note is even played. From the curve of your strings to the tension in your frets, we bring every detail into perfect harmony. This isn’t just a tech service — this is a craft, a calling, and a commitment to every artist who dares to be heard.</p>
-    <p>This is the home of flawless playability. Welcome to Neck and Nut Tech — where your sound gets the respect it deserves.</p>
-    <div style="text-align: center;" data-aos="zoom-in">
-      <img src="joseph-photo.jpg" alt="Joseph Jasef" style="width:150px; border-radius: 12px; margin-top: 20px;" />
-      <p><strong>Joseph Jasef</strong><br>Lead Guitar Technician | Visionary | Musician's Ally</p>
-    </div>
-  </section>
+/* Hero / Header Section */
+.hero {
+  background: linear-gradient(135deg, #0c8b3c, #1abc9c);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-  <section class="button-container" data-aos="fade-up">
-    <a href="https://wa.me/2347014061938" class="action-button" target="_blank">Chat on WhatsApp</a>
-    <a href="mailto:neckandnut@gmail.com" class="action-button">Contact Us via Email</a>
-  </section>
+.logo {
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
 
-  <section id="about" data-aos="fade-up">
-    <h2>About Neck and Nut Tech</h2>
-    <p>Founded by Joseph Jasef,
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+/* Section Styling */
+.section {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  margin-bottom: 30px;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+/* Fade In Animation */
+.fade-in {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section h2 {
+  color: #0c8b3c;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+.section li {
+  margin-bottom: 10px;
+}
+
+/* Profile Image */
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-photo {
+  width: 150px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.button-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.action-button {
+  display: inline-block;
+  padding: 14px 24px;
+  margin: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.action-button:hover {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  transform: scale(1.05);
+}
+
+.whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.whatsapp:hover {
+  background: linear-gradient(135deg, #128C7E, #075E54);
+}
+
+.email {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+.email:hover {
+  background: linear-gradient(135deg, #1c6692, #2471a3);
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  border-top: 4px solid #0c8b3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 25px 15px;
+  }
+
+  .action-button {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+
+  .profile-photo {
+    width: 100px;
+  }
+}
