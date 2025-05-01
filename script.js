@@ -1,50 +1,53 @@
-// Show welcome message in console
-window.addEventListener('DOMContentLoaded', () => {
-  console.log("Welcome to Neck and Nut Tech's amazing site!");
-  animateSections();
-});
+// Typing effect for welcome message
+document.addEventListener('DOMContentLoaded', () => {
+  const welcomeText = "Every guitarist knows: when your guitar feels right, your soul sings louder...";
+  const target = document.getElementById('typing-text');
+  let index = 0;
 
-// Animate sections on scroll
-function animateSections() {
-  const sections = document.querySelectorAll('section');
-  const options = {
-    threshold: 0.1
-  };
+  function type() {
+    if (index < welcomeText.length) {
+      target.textContent += welcomeText.charAt(index);
+      index++;
+      setTimeout(type, 30);
+    }
+  }
 
-  const observer = new IntersectionObserver((entries) => {
+  if (target) {
+    target.textContent = '';
+    type();
+  }
+
+  // Fade-in sections on scroll
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
       }
     });
-  }, options);
+  }, {
+    threshold: 0.1
+  });
 
-  sections.forEach(section => {
-    section.classList.add('hidden');
+  document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
   });
-}
 
-// Back-to-top button
+  // Animate header logo
+  const logo = document.querySelector('header img');
+  if (logo) {
+    logo.classList.add('bounce-in');
+  }
+});
+
+// Smooth scroll to top
 const backToTop = document.createElement('button');
-backToTop.textContent = '↑ Top';
-backToTop.style.position = 'fixed';
-backToTop.style.bottom = '25px';
-backToTop.style.right = '25px';
-backToTop.style.padding = '12px 18px';
-backToTop.style.border = 'none';
-backToTop.style.background = '#0c8b3c';
-backToTop.style.color = 'white';
-backToTop.style.borderRadius = '50%';
-backToTop.style.cursor = 'pointer';
-backToTop.style.display = 'none';
-backToTop.style.zIndex = '1000';
-backToTop.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.2)';
-backToTop.style.fontSize = '16px';
+backToTop.textContent = '↑';
+backToTop.classList.add('back-to-top');
 document.body.appendChild(backToTop);
 
 window.addEventListener('scroll', () => {
-  backToTop.style.display = window.scrollY > 400 ? 'block' : 'none';
+  backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
 });
 
 backToTop.addEventListener('click', () => {
