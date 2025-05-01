@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neck and Nut Tech</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+    }
+
+    header img {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
     .action-button {
-      background-color: #f39c12; /* Orange color */
+      background-color: #f39c12;
       color: white;
       padding: 12px 20px;
       text-align: center;
@@ -20,17 +51,41 @@
     }
 
     .action-button:hover {
-      background-color: #e67e22; /* Darker orange on hover */
+      background-color: #e67e22;
     }
 
     .button-container {
       text-align: center;
       margin-top: 20px;
     }
+
+    #welcome img {
+      width: 150px;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #222;
+      color: white;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="neck-and-nut-logo.jpeg" alt="Neck and Nut Tech Logo" />
     <h1>Neck and Nut Tech</h1>
     <p>Where Precision Meets Passion</p>
   </header>
@@ -39,15 +94,14 @@
     <h2>Welcome Message</h2>
     <p>Every guitarist knows: when your guitar feels right, your soul sings louder. At Neck and Nut Tech, we don’t just fix gear—we fine-tune expression. We sculpt your sound before the first note is even played. From the curve of your strings to the tension in your frets, we bring every detail into perfect harmony. This isn’t just a tech service — this is a craft, a calling, and a commitment to every artist who dares to be heard.</p>
     <p>This is the home of flawless playability. Welcome to Neck and Nut Tech — where your sound gets the respect it deserves.</p>
-    <p><strong>- Joseph Jasef</strong><br>Lead Guitar Technician | Visionary | Musician's Ally</p>
+    <div style="text-align: center;">
+      <img src="joseph-photo.jpg" alt="Joseph Jasef" />
+      <p><strong>Joseph Jasef</strong><br>Lead Guitar Technician | Visionary | Musician's Ally</p>
+    </div>
   </section>
 
-  <!-- Action Buttons Section -->
   <section class="button-container">
-    <!-- WhatsApp Button -->
     <a href="https://wa.me/2347014061938" class="action-button" target="_blank">Chat on WhatsApp</a>
-    
-    <!-- Email Button -->
     <a href="mailto:neckandnut@gmail.com" class="action-button">Contact Us via Email</a>
   </section>
 
