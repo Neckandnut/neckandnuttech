@@ -1,36 +1,29 @@
-// Smooth fade-in on scroll
-const sections = document.querySelectorAll('.section');
+// Animate welcome message on page load
+window.addEventListener('DOMContentLoaded', () => {
+  console.log("Welcome to Neck and Nut Tech's website!");
+});
 
-const revealOnScroll = () => {
-  const triggerBottom = window.innerHeight * 0.85;
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop < triggerBottom) {
-      section.classList.add('fade-in');
-    }
-  });
-};
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+  duration: 1000, // Animation duration in ms
+  once: true      // Only animate once per element
+});
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-
-// Back-to-top button
+// Create and show back-to-top button
 const backToTop = document.createElement('button');
-backToTop.textContent = '↑';
-backToTop.title = 'Back to top';
+backToTop.textContent = '↑ Top';
 backToTop.style.position = 'fixed';
 backToTop.style.bottom = '20px';
 backToTop.style.right = '20px';
-backToTop.style.padding = '12px 16px';
+backToTop.style.padding = '12px 18px';
 backToTop.style.border = 'none';
 backToTop.style.background = '#0c8b3c';
-backToTop.style.color = '#fff';
-backToTop.style.borderRadius = '50%';
+backToTop.style.color = 'white';
+backToTop.style.borderRadius = '50px';
 backToTop.style.cursor = 'pointer';
 backToTop.style.display = 'none';
-backToTop.style.fontSize = '20px';
+backToTop.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
 backToTop.style.zIndex = '1000';
-backToTop.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
 backToTop.style.transition = 'opacity 0.3s ease';
 
 document.body.appendChild(backToTop);
@@ -43,5 +36,19 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Optional welcome message in console
-console.log("%cWelcome to Neck and Nut Tech!", "color: #0c8b3c; font-size: 16px; font-weight: bold;");
+// Add subtle floating animation to header logo
+const logo = document.querySelector('header img');
+if (logo) {
+  logo.style.animation = 'float 3s ease-in-out infinite';
+}
+
+// Floating animation keyframe
+const style = document.createElement('style');
+style.textContent = `
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+`;
+document.head.appendChild(style);
